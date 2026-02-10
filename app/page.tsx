@@ -1007,19 +1007,19 @@ export default function Home() {
                         </h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex items-start gap-2">
-                            <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                            <FiCheck className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
                             <span className="text-muted-foreground">Valid business email (non-disposable, low risk)</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                            <FiCheck className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
                             <span className="text-muted-foreground">Company fit score 5+ / 10</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                            <FiCheck className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
                             <span className="text-muted-foreground">Interest score 50+ / 100 or HOT/WARM intent</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                            <FiCheck className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
                             <span className="text-muted-foreground">Decision-maker or influencer role</span>
                           </div>
                         </div>
@@ -1027,7 +1027,7 @@ export default function Home() {
                       <Separator />
                       <div>
                         <h4 className="text-sm font-semibold text-foreground flex items-center gap-2 mb-2">
-                          <GlobeIcon className="w-4 h-4 text-primary" />
+                          <FiGlobe className="w-4 h-4 text-primary" />
                           Integrations
                         </h4>
                         <div className="space-y-2 text-sm">
@@ -1048,7 +1048,7 @@ export default function Home() {
                       <Separator />
                       <div>
                         <h4 className="text-sm font-semibold text-foreground flex items-center gap-2 mb-2">
-                          <ShieldIcon className="w-4 h-4 text-primary" />
+                          <FiShield className="w-4 h-4 text-primary" />
                           Pipeline Flow
                         </h4>
                         <div className="flex flex-col gap-1 text-sm">
