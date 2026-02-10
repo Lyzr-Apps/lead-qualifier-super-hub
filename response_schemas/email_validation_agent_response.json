@@ -1,0 +1,66 @@
+{
+  "agent_name": "Email Validation Agent",
+  "agent_id": "698b05ecaeac12eb2f65088e",
+  "agent_purpose": "Validates business email legitimacy",
+  "description": "Validates business email addresses for lead qualification. Returns validation status (valid/invalid), business vs personal classification, disposable email detection, domain extraction, company association, risk score, and validation reasoning.",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "summary": "string",
+      "data": {
+        "is_valid": "boolean",
+        "is_business_email": "boolean",
+        "is_disposable": "boolean",
+        "domain": "string",
+        "company_association": "string",
+        "risk_score": "string",
+        "validation_reasoning": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "summary": "The provided email is a valid business address associated with Example Corp.",
+      "data": {
+        "is_valid": true,
+        "is_business_email": true,
+        "is_disposable": false,
+        "domain": "example.com",
+        "company_association": "Example Corp",
+        "risk_score": "low",
+        "validation_reasoning": "The email domain 'example.com' is owned by Example Corp, is not a free or disposable email provider, and is recognized as a legitimate business domain. Therefore, the risk is assessed as low."
+      }
+    },
+    "metadata": {
+      "agent_name": "Email Validation Agent",
+      "timestamp": "2024-06-15T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-10T10:23:15.580576",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "summary": "The provided email is a valid business address associated with Example Corp.",
+      "data": {
+        "is_valid": true,
+        "is_business_email": true,
+        "is_disposable": false,
+        "domain": "example.com",
+        "company_association": "Example Corp",
+        "risk_score": "low",
+        "validation_reasoning": "The email domain 'example.com' is owned by Example Corp, is not a free or disposable email provider, and is recognized as a legitimate business domain. Therefore, the risk is assessed as low."
+      }
+    },
+    "metadata": {
+      "agent_name": "Email Validation Agent",
+      "timestamp": "2024-06-15T12:00:00Z"
+    }
+  }
+}

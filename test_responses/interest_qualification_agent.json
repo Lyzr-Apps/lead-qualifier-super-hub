@@ -1,0 +1,62 @@
+{
+  "agent_name": "Interest Qualification Agent",
+  "agent_id": "698b0612aeac12eb2f65088f",
+  "test_input": "Qualify this lead for VPN cloud services. Lead: Mike Chen, CTO at TechVault Inc (200 employees, fintech). Conversation transcript: 'We're looking to secure our remote workforce. Currently evaluating VPN solutions for our 200+ employees across 3 offices. We need something that integrates with our existing cloud infrastructure on AWS. Budget is allocated for Q1. Can you walk me through your enterprise plans?'",
+  "response": {
+    "status": "success",
+    "result": {
+      "summary": "Highly qualified HOT lead - CTO with explicit VPN needs, approved budget, immediate timeline, and clear security requirements for 200+ employee fintech company.",
+      "data": {
+        "qualification_score": 92,
+        "intent_level": "HOT",
+        "buying_signals": [
+          "Explicit VPN solution evaluation in progress",
+          "Decision-maker role (CTO) with purchasing authority",
+          "Specific employee count (200+) indicates enterprise need",
+          "Budget already allocated for Q1 (immediate timeline)",
+          "Active request for enterprise plan details",
+          "Security-focused language ('secure our remote workforce')",
+          "Fintech industry with high compliance/security requirements",
+          "Multi-office deployment need (3 locations)",
+          "Cloud infrastructure integration requirement (AWS)",
+          "Competitive evaluation stage ('currently evaluating')"
+        ],
+        "disqualification_reasons": [],
+        "recommended_action": "immediate_call",
+        "scoring_breakdown": {
+          "vpn_security_interest": 25,
+          "company_fit": 20,
+          "decision_maker_authority": 20,
+          "timeline_urgency": 15,
+          "budget_signals": 10,
+          "competitive_evaluation": 2
+        },
+        "reasoning": "This is an exceptionally strong lead scoring 92/100. Key factors: (1) Direct decision-maker (CTO) actively seeking VPN solutions, (2) Budget pre-approved with Q1 timeline indicating immediate need, (3) Enterprise-scale deployment (200+ users, 3 offices), (4) Fintech vertical has stringent security/compliance needs making them ideal fit for premium VPN services, (5) Technical requirements mentioned (AWS integration) shows sophistication and serious evaluation, (6) Proactive request for enterprise plans indicates bottom-of-funnel intent. No disqualification factors present. Immediate sales engagement recommended to capitalize on active buying cycle."
+      }
+    },
+    "metadata": {
+      "agent_name": "Interest Qualification Agent",
+      "timestamp": "2025-01-14T08:32:15Z"
+    }
+  },
+  "field_types": {
+    "result.summary": "string",
+    "result.data": "object",
+    "result.data.qualification_score": "number",
+    "result.data.intent_level": "string",
+    "result.data.buying_signals": "array",
+    "result.data.disqualification_reasons": "array",
+    "result.data.recommended_action": "string",
+    "result.data.scoring_breakdown": "object",
+    "result.data.scoring_breakdown.vpn_security_interest": "number",
+    "result.data.scoring_breakdown.company_fit": "number",
+    "result.data.scoring_breakdown.decision_maker_authority": "number",
+    "result.data.scoring_breakdown.timeline_urgency": "number",
+    "result.data.scoring_breakdown.budget_signals": "number",
+    "result.data.scoring_breakdown.competitive_evaluation": "number",
+    "result.data.reasoning": "string"
+  },
+  "status": "passed",
+  "timestamp": "2026-02-10T00:00:00Z",
+  "notes": "Agent returned JSON wrapped in markdown code fences. The underlying JSON structure is valid and was extracted successfully."
+}

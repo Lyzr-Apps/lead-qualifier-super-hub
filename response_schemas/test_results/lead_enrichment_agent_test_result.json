@@ -1,0 +1,65 @@
+{
+  "agent_name": "Lead Enrichment Agent",
+  "agent_id": "698b05ec6a442daad7b60b74",
+  "test_message": "Enrich this lead for our VPN sales pipeline. Email: sarah.jones@cloudflare.com, Company: Cloudflare. Provide company firmographics, employee count, industry, technologies used, and fit score for VPN cloud services.",
+  "expected_purpose": "Enriches lead data with company firmographics",
+  "timestamp": "2026-02-10T10:20:55.024125",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "summary": "Cloudflare is a leading global internet security, performance, and cloud services company with a large workforce and broad technology stack, making it a strong candidate for advanced VPN/cloud solutions.",
+      "data": {
+        "company_name": "Cloudflare, Inc.",
+        "industry": "Internet Infrastructure & Cybersecurity",
+        "employee_count_range": "2000-3000",
+        "annual_revenue_range": "$900M-$1.1B",
+        "headquarters_location": "San Francisco, California, USA",
+        "website": "https://www.cloudflare.com",
+        "technologies_used": [
+          "Cloudflare CDN",
+          "Kubernetes",
+          "Docker",
+          "Amazon Web Services (AWS)",
+          "Python",
+          "Go",
+          "Node.js",
+          "Terraform",
+          "Kafka",
+          "MySQL",
+          "Redis",
+          "Datadog",
+          "Grafana"
+        ],
+        "funding_stage": "Public (NYSE: NET)",
+        "key_decision_makers": [
+          "Matthew Prince (Co-founder & CEO)",
+          "Michelle Zatlyn (Co-founder & President)",
+          "Thomas Seifert (CFO)"
+        ],
+        "linkedin_url": "https://www.linkedin.com/company/cloudflare/",
+        "fit_score": 9,
+        "fit_reasoning": "Cloudflare is a highly technical enterprise in the cybersecurity and cloud space, with 2000+ employees, global operations, and advanced cloud adoption. They are already a provider of network security technologies and likely have a large remote and distributed workforce. Fit is high, though they may build or use internal solutions, making partnership more challenging.",
+        "confidence_levels": {
+          "company_name": "high",
+          "industry": "high",
+          "employee_count_range": "high",
+          "annual_revenue_range": "high",
+          "headquarters_location": "high",
+          "website": "high",
+          "technologies_used": "medium-high",
+          "funding_stage": "high",
+          "key_decision_makers": "medium-high",
+          "linkedin_url": "high",
+          "fit_score": "medium-high"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Lead Enrichment Agent",
+      "timestamp": "2024-06-13T18:24:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"summary\": \"Cloudflare is a leading global internet security, performance, and cloud services company with a large workforce and broad technology stack, making it a strong candidate for advanced VPN/cloud solutions.\",\n    \"data\": {\n      \"company_name\": \"Cloudflare, Inc.\",\n      \"industry\": \"Internet Infrastructure & Cybersecurity\",\n      \"employee_count_range\": \"2000-3000\",\n      \"annual_revenue_range\": \"$900M-$1.1B\",\n      \"headquarters_location\": \"San Francisco, California, USA\",\n      \"website\": \"https://www.cloudflare.com\",\n      \"technologies_used\": [\n        \"Cloudflare CDN\",\n        \"Kubernetes\",\n        \"Docker\",\n        \"Amazon Web Services (AWS)\",\n        \"Python\",\n        \"Go\",\n        \"Node.js\",\n        \"Terraform\",\n        \"Kafka\",\n        \"MySQL\",\n        \"Redis\",\n        \"Datadog\",\n        \"Grafana\"\n      ],\n      \"funding_stage\": \"Public (NYSE: NET)\",\n      \"key_decision_makers\": [\n        \"Matthew Prince (Co-founder & CEO)\",\n        \"Michelle Zatlyn (Co-founder & President)\",\n        \"Thomas Seifert (CFO)\"\n      ],\n      \"linkedin_url\": \"https://www.linkedin.com/company/cloudflare/\",\n      \"fit_score\": 9,\n      \"fit_reasoning\": \"Cloudflare is a highly technical enterprise in the cybersecurity and cloud space, with 2000+ employees, global operations, and advanced cloud adoption. They are already a provider of network security technologies and likely have a large remote and distributed workforce. Fit is high, though they may build or use internal solutions, making partnership more challenging.\",\n      \"confidence_levels\": {\n        \"company_name\": \"high\",\n        \"industry\": \"high\",\n        \"employee_count_range\": \"high\",\n        \"annual_revenue_range\": \"high\",\n        \"headquarters_location\": \"high\",\n        \"website\": \"high\",\n        \"technologies_used\": \"medium-high\",\n        \"funding_stage\": \"high\",\n        \"key_decision_makers\": \"medium-high\",\n        \"linkedin_url\": \"high\",\n        \"fit_score\": \"medium-high\"\n      }\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Lead Enrichment Agent\",\n    \"timestamp\": \"2024-06-13T18:24:00Z\"\n  }\n}"
+}

@@ -1,0 +1,43 @@
+{
+  "agent_name": "Lead Qualification Manager",
+  "agent_id": "698b062d01b0a8872f7ad8cf",
+  "agent_purpose": "Orchestrates lead processing workflow with sub-agents",
+  "description": "Manager agent that orchestrates the full lead qualification pipeline by coordinating Email Validation, Lead Enrichment, and Interest Qualification sub-agents. Returns aggregated results including lead info, email validation status, company firmographics, and interest qualification scoring with final QUALIFIED/DISQUALIFIED status.",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "response": "string",
+      "action_taken": "string (optional)",
+      "data": "object (optional, any structured data)",
+      "suggestions": [
+        "string (optional)"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "response": "I've completed the task you requested",
+      "action_taken": "Processed the input and generated output",
+      "data": {
+        "key": "value"
+      },
+      "suggestions": [
+        "You might also want to try X"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Lead Qualification Manager",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  },
+  "is_actual_tested": false,
+  "test_timestamp": null,
+  "test_message_used": "Hello, provide a sample response",
+  "raw_test_response": "Certainly! Here\u2019s a sample response that demonstrates the workflow for qualifying a lead, aggregating sub-agent results, and formatting a Slack message for a qualified lead. (Please note this is a sample\u2014you\u2019d replace the values with actual results from the agents and incoming data.)\n\nSample Input (parsed from Intercom webhook):\n\n{\n  \"name\": \"Jane Smith\",\n  \"email\": \"jane.smith@acmeinc.com\",\n  \"company\": \"Acme Inc.\",\n  \"conversation_transcript\": \"I'm interested in a demo for my 50-person SaaS company. We\u2019re evaluating your solution against competitors for Q3.\"\n}\n\nStep-by-step sample:\n\n1. Parse Incoming Lead Information  \n   - Name: Jane Smith  \n   - Email: jane.smith@acmeinc.com  \n   - Company: Acme Inc.  \n   - Conversation: as above\n\n2. Delegate  \n   - Email Validation Agent: jane.smith@acmeinc.com  \n   - Lead Enrichment Agent: jane.smith@acmeinc.com, Acme Inc.  \n   - Interest Qualification Agent: Lead data & transcript\n\n3. Aggregate Sub-Agent Results (simulated):\n\n{\n  \"email_validation\": {\n    \"is_valid\": true,\n    \"is_business_email\": true\n  },\n  \"lead_enrichment\": {\n    \"company_name\": \"Acme Inc.\",\n    \"company_size\": 50,\n    \"industry\": \"SaaS\",\n    \"fit_score\": 8,\n    \"website\": \"https://acmeinc.com\"\n  },\n  \"interest_qualification\": {\n    \"qualification_score\": 62,\n    \"intent_level\": \"High\",\n    \"key_signals\": [\n      \"Requested demo\",\n      \"Mentioned evaluation stage\",\n      \"Timeline for Q3\"\n    ]\n  }\n}\n\n4. Final Qualification Check  \n   - Email valid & business: true  \n   - Company fit score: 8 (>=5)  \n   - Qualification score: 62 (>=40)  \n   \u2192 Lead is QUALIFIED\n\n5. Format Slack Message:\n\nmarkdown_text:\n```\n### :star: New Qualified Lead!\n\n**Name:** Jane Smith  \n**Email:** jane.smith@acmeinc.com  \n**Company:** Acme Inc.  \n- Size: 50 employees  \n- Industry: SaaS  \n- Website: [acmeinc.com](https://acmeinc.com)\n\n**Qualification Score:** 62/100  \n**Intent Level:** High\n\n**Key Buying Signals:**  \n- Requested demo  \n- Mentioned evaluation stage  \n- Timeline for Q3\n\n**Recommended Next Action:**  \nReach out to schedule a product demo ASAP and provide competitive comparison materials.\n\n---\n```\n\n6. Send Slack Notification (via SLACK_SENDS_A_MESSAGE_TO_A_SLACK_CHANNEL).\n\n7. Return Full Aggregated Lead Profile:\n\n{\n  \"lead_profile\": {\n    \"name\": \"Jane Smith\",\n    \"email\": \"jane.smith@acmeinc.com\",\n    \"company\": {\n      \"name\": \"Acme Inc.\",\n      \"size\": 50,\n      \"industry\": \"SaaS\",\n      \"website\": \"https://acmeinc.com\",\n      \"fit_score\": 8\n    },\n    \"qualification_score\": 62,\n    \"intent_level\": \"High\",\n    \"key_signals\": [\n      \"Requested demo\",\n      \"Mentioned evaluation stage\",\n      \"Timeline for Q3\"\n    ],\n    \"recommended_action\": \"Reach out to schedule a product demo ASAP and provide competitive comparison materials.\"\n  },\n  \"final_status\": \"QUALIFIED\"\n}\n\nLet me know if you\u2019d like another example or want to test with actual lead data!",
+  "test_error": "Response not valid JSON: Extra data: line 8 column 1 (char 238)"
+}

@@ -1,0 +1,29 @@
+{
+  "agent_name": "Email Validation Agent",
+  "agent_id": "698b05ecaeac12eb2f65088e",
+  "test_message": "Please validate this email for our lead qualification pipeline: john.smith@acmecorp.com. Check if it's a legitimate business email, not disposable, and identify the company association.",
+  "expected_purpose": "Validates business email legitimacy",
+  "timestamp": "2026-02-10T10:20:45.297688",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "summary": "The email john.smith@acmecorp.com appears to be a valid, non-disposable business email associated with Acme Corp.",
+      "data": {
+        "is_valid": true,
+        "is_business_email": true,
+        "is_disposable": false,
+        "domain": "acmecorp.com",
+        "company_association": "Acme Corp",
+        "risk_score": "low",
+        "validation_reasoning": "The domain 'acmecorp.com' is not from a free or disposable email provider and is structured to represent an established company. 'Acme Corp' is a common placeholder but is frequently used by legitimate businesses. There is no indication this is a temporary or free address, and the format is consistent with business email practices."
+      }
+    },
+    "metadata": {
+      "agent_name": "Email Validation Agent",
+      "timestamp": "2024-06-14T15:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"summary\": \"The email john.smith@acmecorp.com appears to be a valid, non-disposable business email associated with Acme Corp.\",\n    \"data\": {\n      \"is_valid\": true,\n      \"is_business_email\": true,\n      \"is_disposable\": false,\n      \"domain\": \"acmecorp.com\",\n      \"company_association\": \"Acme Corp\",\n      \"risk_score\": \"low\",\n      \"validation_reasoning\": \"The domain 'acmecorp.com' is not from a free or disposable email provider and is structured to represent an established company. 'Acme Corp' is a common placeholder but is frequently used by legitimate businesses. There is no indication this is a temporary or free address, and the format is consistent with business email practices.\"\n    }\n  },\n  \"metadata\": {\"agent_name\": \"Email Validation Agent\", \"timestamp\": \"2024-06-14T15:00:00Z\"}\n}"
+}

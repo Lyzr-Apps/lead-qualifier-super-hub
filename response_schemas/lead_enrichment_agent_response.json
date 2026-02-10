@@ -1,0 +1,147 @@
+{
+  "agent_name": "Lead Enrichment Agent",
+  "agent_id": "698b05ec6a442daad7b60b74",
+  "agent_purpose": "Enriches lead data with company firmographics",
+  "description": "Enriches lead data with comprehensive company firmographics including company name, industry, employee count, revenue, location, technologies, funding stage, key decision makers, fit score for VPN services, and confidence levels for each data point.",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "summary": "string",
+      "data": {
+        "company_name": "string",
+        "industry": "string",
+        "employee_count_range": "string",
+        "annual_revenue_range": "string",
+        "headquarters_location": "string",
+        "website": "string",
+        "technologies_used": [
+          "string"
+        ],
+        "funding_stage": "string",
+        "key_decision_makers": [
+          "string"
+        ],
+        "linkedin_url": "string",
+        "fit_score": "number",
+        "fit_reasoning": "string",
+        "confidence_levels": {
+          "company_name": "string",
+          "industry": "string",
+          "employee_count_range": "string",
+          "annual_revenue_range": "string",
+          "headquarters_location": "string",
+          "website": "string",
+          "technologies_used": "string",
+          "funding_stage": "string",
+          "key_decision_makers": "string",
+          "linkedin_url": "string"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "summary": "SampleCorp is a leading provider of cloud-based HR software solutions, serving medium to large enterprises globally. They have a strong remote workforce and use modern cloud technologies.",
+      "data": {
+        "company_name": "SampleCorp",
+        "industry": "Information Technology & Services",
+        "employee_count_range": "200-500",
+        "annual_revenue_range": "$50M-$100M",
+        "headquarters_location": "San Francisco, CA, USA",
+        "website": "https://www.samplecorp.com",
+        "technologies_used": [
+          "Amazon Web Services",
+          "Microsoft Azure",
+          "Salesforce",
+          "Slack",
+          "Zoom",
+          "Okta",
+          "Docker",
+          "Kubernetes"
+        ],
+        "funding_stage": "Series C",
+        "key_decision_makers": [
+          "Jane Smith - CEO",
+          "Bob Johnson - CTO",
+          "Lisa Wong - VP of IT"
+        ],
+        "linkedin_url": "https://www.linkedin.com/company/samplecorp",
+        "fit_score": 9,
+        "fit_reasoning": "SampleCorp is in the IT sector with over 200 employees, operates with modern cloud infrastructure, and supports a remote workforce\u2014making them an excellent fit for VPN and cloud security services.",
+        "confidence_levels": {
+          "company_name": "high",
+          "industry": "high",
+          "employee_count_range": "high",
+          "annual_revenue_range": "medium",
+          "headquarters_location": "high",
+          "website": "high",
+          "technologies_used": "medium",
+          "funding_stage": "medium",
+          "key_decision_makers": "medium",
+          "linkedin_url": "high"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Lead Enrichment Agent",
+      "timestamp": "2024-06-07T19:32:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-10T10:23:21.420641",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "summary": "SampleCorp is a leading provider of cloud-based HR software solutions, serving medium to large enterprises globally. They have a strong remote workforce and use modern cloud technologies.",
+      "data": {
+        "company_name": "SampleCorp",
+        "industry": "Information Technology & Services",
+        "employee_count_range": "200-500",
+        "annual_revenue_range": "$50M-$100M",
+        "headquarters_location": "San Francisco, CA, USA",
+        "website": "https://www.samplecorp.com",
+        "technologies_used": [
+          "Amazon Web Services",
+          "Microsoft Azure",
+          "Salesforce",
+          "Slack",
+          "Zoom",
+          "Okta",
+          "Docker",
+          "Kubernetes"
+        ],
+        "funding_stage": "Series C",
+        "key_decision_makers": [
+          "Jane Smith - CEO",
+          "Bob Johnson - CTO",
+          "Lisa Wong - VP of IT"
+        ],
+        "linkedin_url": "https://www.linkedin.com/company/samplecorp",
+        "fit_score": 9,
+        "fit_reasoning": "SampleCorp is in the IT sector with over 200 employees, operates with modern cloud infrastructure, and supports a remote workforce\u2014making them an excellent fit for VPN and cloud security services.",
+        "confidence_levels": {
+          "company_name": "high",
+          "industry": "high",
+          "employee_count_range": "high",
+          "annual_revenue_range": "medium",
+          "headquarters_location": "high",
+          "website": "high",
+          "technologies_used": "medium",
+          "funding_stage": "medium",
+          "key_decision_makers": "medium",
+          "linkedin_url": "high"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Lead Enrichment Agent",
+      "timestamp": "2024-06-07T19:32:00Z"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "agent_name": "Lead Qualification Manager",
+  "agent_id": "698b062d01b0a8872f7ad8cf",
+  "test_input": "New lead from Intercom webhook: Name: David Park, Email: david.park@securetech.io, Company: SecureTech Solutions, Role: VP of IT, Conversation: 'Hi, we are a 500-person financial services company looking to upgrade our VPN infrastructure. Our current solution doesn't scale well for remote workers. We need enterprise-grade VPN with SSO integration and compliance reporting. We have budget approved and want to make a decision this quarter. Can someone from your sales team reach out?'",
+  "response": {
+    "status": "success",
+    "result": {
+      "summary": "Lead fully processed through all sub-agents. David Park at SecureTech Solutions is a QUALIFIED HOT lead with a score of 94/100.",
+      "data": {
+        "lead_name": "David Park",
+        "lead_email": "david.park@securetech.io",
+        "lead_role": "VP of IT",
+        "final_status": "QUALIFIED",
+        "email_validation": {
+          "is_valid": true,
+          "is_business_email": true,
+          "is_disposable": false,
+          "risk_score": "low"
+        },
+        "company_enrichment": {
+          "company_name": "SecureTech Solutions",
+          "industry": "Cybersecurity / Information Technology",
+          "employee_count": 500,
+          "revenue_range": "$10M-$50M",
+          "headquarters": "San Jose, California, United States",
+          "website": "https://securetech.io",
+          "technologies": ["AWS", "Azure", "Cisco", "Office 365", "VMware", "Palo Alto Networks", "Slack", "Zoom"],
+          "funding_stage": "Private",
+          "linkedin_url": "https://www.linkedin.com/company/securetech-io",
+          "fit_score": 9
+        },
+        "interest_qualification": {
+          "qualification_score": 94,
+          "intent_level": "HOT",
+          "buying_signals": [
+            "Budget approved",
+            "Decision this quarter (imminent)",
+            "Clear enterprise security needs (SSO, compliance)",
+            "Scaling remote access",
+            "Decision maker outreach"
+          ],
+          "recommended_action": "Assign to an experienced Enterprise AE. Respond ASAP to schedule a demo/discovery call. Prepare collateral for VPN/SSO solutions tailored for financial services and compliance."
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Lead Qualification Manager",
+      "timestamp": "2026-02-10T00:00:00Z"
+    }
+  },
+  "field_types": {
+    "result.summary": "string",
+    "result.data": "object",
+    "result.data.lead_name": "string",
+    "result.data.lead_email": "string",
+    "result.data.lead_role": "string",
+    "result.data.final_status": "string",
+    "result.data.email_validation": "object",
+    "result.data.email_validation.is_valid": "boolean",
+    "result.data.email_validation.is_business_email": "boolean",
+    "result.data.email_validation.is_disposable": "boolean",
+    "result.data.email_validation.risk_score": "string",
+    "result.data.company_enrichment": "object",
+    "result.data.company_enrichment.company_name": "string",
+    "result.data.company_enrichment.industry": "string",
+    "result.data.company_enrichment.employee_count": "number",
+    "result.data.company_enrichment.revenue_range": "string",
+    "result.data.company_enrichment.headquarters": "string",
+    "result.data.company_enrichment.website": "string",
+    "result.data.company_enrichment.technologies": "array",
+    "result.data.company_enrichment.funding_stage": "string",
+    "result.data.company_enrichment.linkedin_url": "string",
+    "result.data.company_enrichment.fit_score": "number",
+    "result.data.interest_qualification": "object",
+    "result.data.interest_qualification.qualification_score": "number",
+    "result.data.interest_qualification.intent_level": "string",
+    "result.data.interest_qualification.buying_signals": "array",
+    "result.data.interest_qualification.recommended_action": "string"
+  },
+  "status": "passed",
+  "timestamp": "2026-02-10T00:00:00Z",
+  "notes": "Manager agent returned free-text markdown summary aggregating all sub-agent results. Response was parsed and structured into the standard format. The manager successfully coordinated Email Validation, Lead Enrichment, and Interest Qualification sub-agents."
+}

@@ -1,0 +1,79 @@
+{
+  "agent_name": "Lead Enrichment Agent",
+  "agent_id": "698b05ec6a442daad7b60b74",
+  "test_input": "Enrich this lead for our VPN sales pipeline. Email: sarah.jones@cloudflare.com, Company: Cloudflare. Provide company firmographics, employee count, industry, technologies used, and fit score for VPN cloud services.",
+  "response": {
+    "status": "success",
+    "result": {
+      "summary": "Cloudflare is a leading global internet security, performance, and cloud services company with a large workforce and broad technology stack, making it a strong candidate for advanced VPN/cloud solutions.",
+      "data": {
+        "company_name": "Cloudflare, Inc.",
+        "industry": "Internet Infrastructure & Cybersecurity",
+        "employee_count_range": "2000-3000",
+        "annual_revenue_range": "$900M-$1.1B",
+        "headquarters_location": "San Francisco, California, USA",
+        "website": "https://www.cloudflare.com",
+        "technologies_used": [
+          "Cloudflare CDN",
+          "Kubernetes",
+          "Docker",
+          "Amazon Web Services (AWS)",
+          "Python",
+          "Go",
+          "Node.js",
+          "Terraform",
+          "Kafka",
+          "MySQL",
+          "Redis",
+          "Datadog",
+          "Grafana"
+        ],
+        "funding_stage": "Public (NYSE: NET)",
+        "key_decision_makers": [
+          "Matthew Prince (Co-founder & CEO)",
+          "Michelle Zatlyn (Co-founder & President)",
+          "Thomas Seifert (CFO)"
+        ],
+        "linkedin_url": "https://www.linkedin.com/company/cloudflare/",
+        "fit_score": 9,
+        "fit_reasoning": "Cloudflare is a highly technical enterprise in the cybersecurity and cloud space, with 2000+ employees, global operations, and advanced cloud adoption. They are already a provider of network security technologies and likely have a large remote and distributed workforce. Fit is high, though they may build or use internal solutions, making partnership more challenging.",
+        "confidence_levels": {
+          "company_name": "high",
+          "industry": "high",
+          "employee_count_range": "high",
+          "annual_revenue_range": "high",
+          "headquarters_location": "high",
+          "website": "high",
+          "technologies_used": "medium-high",
+          "funding_stage": "high",
+          "key_decision_makers": "medium-high",
+          "linkedin_url": "high",
+          "fit_score": "medium-high"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Lead Enrichment Agent",
+      "timestamp": "2024-06-13T18:24:00Z"
+    }
+  },
+  "field_types": {
+    "result.summary": "string",
+    "result.data": "object",
+    "result.data.company_name": "string",
+    "result.data.industry": "string",
+    "result.data.employee_count_range": "string",
+    "result.data.annual_revenue_range": "string",
+    "result.data.headquarters_location": "string",
+    "result.data.website": "string",
+    "result.data.technologies_used": "array",
+    "result.data.funding_stage": "string",
+    "result.data.key_decision_makers": "array",
+    "result.data.linkedin_url": "string",
+    "result.data.fit_score": "number",
+    "result.data.fit_reasoning": "string",
+    "result.data.confidence_levels": "object"
+  },
+  "status": "passed",
+  "timestamp": "2026-02-10T00:00:00Z"
+}

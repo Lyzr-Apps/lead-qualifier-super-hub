@@ -1,0 +1,66 @@
+{
+  "agents": {
+    "lead_qualification_manager": {
+      "id": "698b062d01b0a8872f7ad8cf",
+      "name": "Lead Qualification Manager",
+      "type": "manager"
+    },
+    "email_validation_agent": {
+      "id": "698b05ecaeac12eb2f65088e",
+      "name": "Email Validation Agent",
+      "type": "sub-agent"
+    },
+    "lead_enrichment_agent": {
+      "id": "698b05ec6a442daad7b60b74",
+      "name": "Lead Enrichment Agent",
+      "type": "sub-agent"
+    },
+    "interest_qualification_agent": {
+      "id": "698b0612aeac12eb2f65088f",
+      "name": "Interest Qualification Agent",
+      "type": "sub-agent"
+    }
+  },
+  "test_results": {
+    "email_validation_agent": {
+      "status": "passed",
+      "agent_id": "698b05ecaeac12eb2f65088e",
+      "test_file": "/app/nextjs-project/test_responses/email_validation_agent.json",
+      "schema_file": "/app/nextjs-project/response_schemas/email_validation_agent_response.json",
+      "response_format": "structured_json",
+      "tested_at": "2026-02-10T00:00:00Z"
+    },
+    "lead_enrichment_agent": {
+      "status": "passed",
+      "agent_id": "698b05ec6a442daad7b60b74",
+      "test_file": "/app/nextjs-project/test_responses/lead_enrichment_agent.json",
+      "schema_file": "/app/nextjs-project/response_schemas/lead_enrichment_agent_response.json",
+      "response_format": "structured_json",
+      "tested_at": "2026-02-10T00:00:00Z"
+    },
+    "interest_qualification_agent": {
+      "status": "passed",
+      "agent_id": "698b0612aeac12eb2f65088f",
+      "test_file": "/app/nextjs-project/test_responses/interest_qualification_agent.json",
+      "schema_file": "/app/nextjs-project/response_schemas/interest_qualification_agent_response.json",
+      "response_format": "markdown_wrapped_json",
+      "note": "Agent returns JSON wrapped in markdown code fences. Underlying JSON is valid and was extracted.",
+      "tested_at": "2026-02-10T00:00:00Z"
+    },
+    "lead_qualification_manager": {
+      "status": "passed",
+      "agent_id": "698b062d01b0a8872f7ad8cf",
+      "test_file": "/app/nextjs-project/test_responses/lead_qualification_manager.json",
+      "schema_file": "/app/nextjs-project/response_schemas/lead_qualification_manager_response.json",
+      "response_format": "free_text_markdown",
+      "note": "Manager agent returns free-text markdown summary aggregating all sub-agent results. Response was parsed and structured into standard format. Successfully coordinated all 3 sub-agents.",
+      "tested_at": "2026-02-10T00:00:00Z"
+    }
+  },
+  "testing_summary": {
+    "total_agents": 4,
+    "passed": 4,
+    "failed": 0,
+    "completed_at": "2026-02-10T00:00:00Z"
+  }
+}

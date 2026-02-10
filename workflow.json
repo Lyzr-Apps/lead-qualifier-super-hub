@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Intercom Webhook",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "manager_agent",
+      "type": "Agent",
+      "label": "Lead Qualification Manager",
+      "nodeCategory": "agent",
+      "agent_id": "698b062d01b0a8872f7ad8cf"
+    },
+    {
+      "id": "email_validation_agent",
+      "type": "Agent",
+      "label": "Email Validation Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698b05ecaeac12eb2f65088e"
+    },
+    {
+      "id": "lead_enrichment_agent",
+      "type": "Agent",
+      "label": "Lead Enrichment Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698b05ec6a442daad7b60b74"
+    },
+    {
+      "id": "interest_qualification_agent",
+      "type": "Agent",
+      "label": "Interest Qualification Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698b0612aeac12eb2f65088f"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Slack Notification",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "manager_agent"
+    },
+    {
+      "source": "manager_agent",
+      "target": "email_validation_agent"
+    },
+    {
+      "source": "manager_agent",
+      "target": "lead_enrichment_agent"
+    },
+    {
+      "source": "manager_agent",
+      "target": "interest_qualification_agent"
+    },
+    {
+      "source": "manager_agent",
+      "target": "output_node"
+    }
+  ]
+}

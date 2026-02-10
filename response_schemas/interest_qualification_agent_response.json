@@ -1,0 +1,103 @@
+{
+  "agent_name": "Interest Qualification Agent",
+  "agent_id": "698b0612aeac12eb2f65088f",
+  "agent_purpose": "Scores VPN buying intent",
+  "description": "Scores VPN buying intent for leads. Returns qualification score (0-100), intent level (HOT/WARM/COLD), buying signals array, disqualification reasons, recommended next action, detailed scoring breakdown by category, and reasoning narrative.",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "summary": "string",
+      "data": {
+        "qualification_score": "number",
+        "intent_level": "string",
+        "buying_signals": [
+          "any"
+        ],
+        "disqualification_reasons": [
+          "string"
+        ],
+        "recommended_action": "string",
+        "scoring_breakdown": {
+          "vpn_security_interest": "number",
+          "company_fit": "number",
+          "decision_maker_authority": "number",
+          "timeline_urgency": "number",
+          "budget_signals": "number",
+          "competitive_evaluation": "number"
+        },
+        "reasoning": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "summary": "Insufficient information to qualify lead - no conversation data or company details provided to assess VPN/cloud security buying intent.",
+      "data": {
+        "qualification_score": 0,
+        "intent_level": "COLD",
+        "buying_signals": [],
+        "disqualification_reasons": [
+          "No conversation transcript provided",
+          "No company information available",
+          "No expressed interest in VPN or cloud security services",
+          "No decision-maker identification",
+          "No timeline or budget indicators"
+        ],
+        "recommended_action": "request_more_info",
+        "scoring_breakdown": {
+          "vpn_security_interest": 0,
+          "company_fit": 0,
+          "decision_maker_authority": 0,
+          "timeline_urgency": 0,
+          "budget_signals": 0,
+          "competitive_evaluation": 0
+        },
+        "reasoning": "No lead data, conversation context, or company attributes were provided for analysis. Unable to identify any VPN/cloud security buying signals, assess company fit, determine decision-maker authority, or evaluate timeline urgency. Additional information required: conversation transcript, company details (size, industry), contact role/title, and any preliminary discussion of security needs or requirements."
+      }
+    },
+    "metadata": {
+      "agent_name": "Interest Qualification Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-10T10:23:27.937545",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "summary": "Insufficient information to qualify lead - no conversation data or company details provided to assess VPN/cloud security buying intent.",
+      "data": {
+        "qualification_score": 0,
+        "intent_level": "COLD",
+        "buying_signals": [],
+        "disqualification_reasons": [
+          "No conversation transcript provided",
+          "No company information available",
+          "No expressed interest in VPN or cloud security services",
+          "No decision-maker identification",
+          "No timeline or budget indicators"
+        ],
+        "recommended_action": "request_more_info",
+        "scoring_breakdown": {
+          "vpn_security_interest": 0,
+          "company_fit": 0,
+          "decision_maker_authority": 0,
+          "timeline_urgency": 0,
+          "budget_signals": 0,
+          "competitive_evaluation": 0
+        },
+        "reasoning": "No lead data, conversation context, or company attributes were provided for analysis. Unable to identify any VPN/cloud security buying signals, assess company fit, determine decision-maker authority, or evaluate timeline urgency. Additional information required: conversation transcript, company details (size, industry), contact role/title, and any preliminary discussion of security needs or requirements."
+      }
+    },
+    "metadata": {
+      "agent_name": "Interest Qualification Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  }
+}
